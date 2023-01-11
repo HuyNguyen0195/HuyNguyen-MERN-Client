@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 function App() {
   return (
         <div className="body">
-          <div className="topnav" >
+          <div className="header" >
             <NavMenu/>
           </div>
           <div className="content">

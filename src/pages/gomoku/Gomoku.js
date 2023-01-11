@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './gomoku.css'
 import Board from '../../components/Gomoku/Board'
 import Message from '../../components/Gomoku/Message'
 import Refresh from '../../components/Gomoku/Refresh'

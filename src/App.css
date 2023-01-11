@@ -5,7 +5,7 @@
   grid-template-columns: repeat(12,auto);
   gap:10px
 }
-.topnav{
+.header{
   background-color: rgb(140, 184, 231);
   grid-area: 1/1/2/13;
   flex-wrap: wrap;
@@ -17,52 +17,9 @@
   text-align: center;
   display: grid;
 }
-table{
-  border: 1px ;
-}
-.gomoku{
-  display: grid;
-  grid-template-rows: 50px auto;
-  gap: 10px;
-}
-.gomokuBar{
-  background-color: #69c27b;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 10px;
-}
-.gomokuBoard{
-  background-color: #960c7b;
-  background-color: #bbb;
-}
 .footer{
   background-color: blanchedalmond;
   grid-area: 12/1/13/13;
-}
-
-.menu{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-.menu-item{
-  float:left;
-  border-right: 1px solid #bbb;
-}
-.menu-item:last-child{
-  border-right: none;
-}
-.menu-item a{
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-.menu-item a:hover:not(.active){
-  background-color: #111;
 }
 
 
