@@ -6,7 +6,7 @@
   gap:10px
 }
 .header{
-  background-color: rgb(140, 184, 231);
+  background-color: rgb(200, 240, 129);
   grid-area: 1/1/2/13;
   flex-wrap: wrap;
   align-content: center;
