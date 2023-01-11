@@ -14,7 +14,7 @@ const [model,setModel] = useState('');
   useEffect(() => {
     const getData = async ()=>{
       try{
-        const response= await axios.get(`http://localhost:8080`);
+        const response= await axios.get(`https://huynguyen-mern-server.onrender.com`);
       setData(response.data);
       console.log(response);
       setError(null);
