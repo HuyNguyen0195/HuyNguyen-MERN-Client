@@ -26,7 +26,7 @@ const [model,setModel] = useState('');
       }
     };
     getData();
-  },[model]);
+  },[]);
 
    const handeSubmit = async (e)=>{
     e.preventDefault();
