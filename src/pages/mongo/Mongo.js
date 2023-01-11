@@ -10,11 +10,11 @@ const [error, setError] = useState(null);
 const [make,setMake] = useState('');
 const [model,setModel] = useState('');
 
-
+const URL = "https://huynguyen-mern-server.onrender.com"
   useEffect(() => {
     const getData = async ()=>{
       try{
-        const response= await axios.get(`https://huynguyen-mern-server.onrender.com`);
+        const response= await axios.get(URL);
       setData(response.data);
       console.log(response);
       setError(null);
@@ -26,12 +26,12 @@ const [model,setModel] = useState('');
       }
     };
     getData();
-  },[]);
+  },[model]);
 
    const handeSubmit = async (e)=>{
     e.preventDefault();
       if(make!== '' && model!== ''){
-        await axios.post(`http://localhost:8080/post`,{make:make,model:model});
+        await axios.post(URL + `/post`,{make:make,model:model});
         setMake('');setModel('');
       }else {
         alert('input null')
@@ -40,7 +40,7 @@ const [model,setModel] = useState('');
    const handeDelete = async (e)=>{
     e.preventDefault();
     if(make!== '' || model!== ''){
-      await axios.delete(`http://localhost:8080/delete`,{data:{model:model}});
+      await axios.delete(URL + `/delete`,{data:{model:model}});
       //setMake('');setModel('');
     }else {
       alert('input null')
@@ -49,7 +49,6 @@ const [model,setModel] = useState('');
 
   return <div className="container">
     <h1>API MongoDB</h1>
-    <h1>{`${make} ${model} `} </h1>
     <div className="row justify-content-center" >
       <div className="col-12 col-sm-6">
         <Input type={'text'} 
@@ -85,7 +84,7 @@ const [model,setModel] = useState('');
         </MDBTableHead>
         <MDBTableBody>
         {data && data.map(({_id,make,model})=>(
-        <tr>
+        <tr onClick={()=>{setMake(make);setModel(model)}}>
           <th>{make}</th>
           <th>{model}</th>
         </tr>
